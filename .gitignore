@@ -1,3 +1,8 @@
+# Resflow based ignores
+media/**
+db.sqlite3
+db.sqlite3.save
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
