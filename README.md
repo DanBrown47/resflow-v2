@@ -26,10 +26,9 @@
     cd resflow-v2/resflow_v2
     ```
 
-2. **Set up a virtual environment and activate it**:
+2. **Activate the virtual environment**:
 
     ```bash
-    python3 -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
