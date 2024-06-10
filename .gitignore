@@ -1,7 +1,7 @@
 # Resflow based ignores
-media/**
-db.sqlite3
-db.sqlite3.save
+resflow_v2/media/**
+resflow_v2/db.sqlite3
+resflow_v2/db.sqlite3.save
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
