@@ -23,7 +23,6 @@
 
     ```bash
     https://github.com/arfazkhan/resflow-v2.git
-    cd resflow-v2/resflow_v2
     ```
 
 2. **Activate the virtual environment**:
@@ -37,8 +36,13 @@
     ```bash
     pip install -r requirements.txt
     ```
+4. **Change to backend directory**:
 
-4. **Apply migrations**:
+    ```bash
+   cd resflow-v2/resflow_v2
+    ```
+
+5. **Apply migrations**:
 
     ```bash
     python manage.py migrate
@@ -46,7 +50,7 @@
 
 
 
-5. **Run the development server**:
+6. **Run the development server**:
 
     ```bash
     python manage.py runserver
