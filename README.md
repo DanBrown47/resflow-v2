@@ -23,7 +23,7 @@
 
     ```bash
     https://github.com/arfazkhan/resflow-v2.git
-    cd resflow_v2
+    cd resflow-v2/resflow_v2
     ```
 
 2. **Set up a virtual environment and activate it**:
