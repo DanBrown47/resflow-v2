@@ -15,10 +15,6 @@ class Resume(models.Model):
     file = models.FileField(upload_to='resumes/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
-    # Additional Notes or Cover Letter
-    cover_letter_text = models.TextField(blank=True, null=True)
-    cover_letter_file = models.FileField(upload_to='cover_letters/', blank=True, null=True)
-
     def save(self, *args, **kwargs):
         if self.file:
             file_content = self.file.read()
