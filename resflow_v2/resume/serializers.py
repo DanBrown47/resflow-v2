@@ -5,13 +5,13 @@ from .models import Resume
 import os
 
 class FileExtensionValidator:
-    allowed_extensions = ['pdf', 'txt', 'docx'] # Should we keep txt here ? 
+    allowed_extensions = ['pdf', 'docx'] # Should we keep txt here ?  
 
     def __call__(self, value):
         extension = os.path.splitext(value.name)[-1].lower().strip('.')
         if extension not in self.allowed_extensions:
             raise ValidationError(
-                _('File type %(extension)s is not supported. Only PDF, TXT, and DOCX files are allowed.'),
+                _('File type %(extension)s is not supported. Only PDF and DOCX files are allowed.'),
                 params={'extension': extension},
             )
 
