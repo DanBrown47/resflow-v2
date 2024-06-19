@@ -2,11 +2,22 @@ import hashlib
 from django.db import models
 
 class Resume(models.Model):
+    # Personal Information
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    file_hash = models.CharField(max_length=512, default='')  # Set default value
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    linkedin_url = models.URLField(blank=True, null=True)
+    website_url = models.URLField(blank=True, null=True)
+
+    # File related fields
+    file_hash = models.CharField(max_length=512, default='')
     file = models.FileField(upload_to='resumes/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    # Additional Notes or Cover Letter
+    cover_letter_text = models.TextField(blank=True, null=True)
+    cover_letter_file = models.FileField(upload_to='cover_letters/', blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if self.file:
