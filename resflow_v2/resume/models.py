@@ -8,6 +8,7 @@ class Resume(models.Model):
     phone_number = models.CharField(max_length=20, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
     linkedin_url = models.URLField(blank=True, null=True)
+    github_url = models.URLField(blank=True, null=True)
     website_url = models.URLField(blank=True, null=True)
 
     # File related fields
