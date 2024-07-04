@@ -1,8 +1,11 @@
+import logging
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser
 from .models import Resume
 from .serializers import ResumeSerializer
+
+logger = logging.getLogger(__name__)
 
 class ResumeCreateView(generics.CreateAPIView):
     queryset = Resume.objects.all()
@@ -23,9 +26,11 @@ class ResumeCreateView(generics.CreateAPIView):
         
         if serializer.is_valid():
             serializer.save()
+            logger.info(f"Resume uploaded successfully: {serializer.data['name']}")
             return Response({
                 'message': 'Resume uploaded successfully',
                 'data': serializer.data
             }, status=status.HTTP_201_CREATED)
         else:
+            logger.error(f"Resume upload failed: {serializer.errors}")
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
