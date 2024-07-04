@@ -29,7 +29,7 @@ class ResumeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Resume
-        fields = ['id', 'name', 'email', 'phone_number', 'address', 'linkedin_url', 'website_url', 'file', 'uploaded_at']
+        fields = ['id', 'name', 'email', 'phone_number', 'address', 'linkedin_url', 'github_url', 'file', 'uploaded_at']
 
     def validate(self, data):
         # Call superclass' validate to ensure all default validations are done
