@@ -1,8 +1,8 @@
-# resume/models.py
 import hashlib
 import os
 from django.db import models
 from github.utils import extract_github_username
+
 
 class Resume(models.Model):
     name = models.CharField(max_length=100)
