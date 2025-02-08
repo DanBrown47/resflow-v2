@@ -1,106 +1,62 @@
-# resflow-v2
+# ResFlow V2
 
+ResFlow is an innovative tool designed to streamline and enhance the recruitment process. It helps recruiters by automatically processing PDF resumes to extract candidate details and relevant URLs, and then performing Open Source Intelligence (OSINT) to gather additional public information about each candidate.
 
+---
 
+## What is ResFlow?
 
-## Features
+ResFlow simplifies the candidate screening process by:
+- **Parsing PDF Resumes:** Automatically reads resumes in PDF format to extract essential information.
+- **Extracting URLs:** Identifies and extracts URLs embedded in resumes, such as links to GitHub profiles, personal websites, or portfolios.
+- **Performing OSINT:** Gathers publicly available information from the extracted URLs, enriching the candidate's profile with additional insights.
 
-- Users can upload resumes without authentication.
-- Supported file formats: PDF, DOCX, TXT.
-- Drag-and-drop functionality for file upload.
-- Detailed error messages for validation and upload failures.
+---
 
-## Technologies Used
+## Key Benefits
 
-- **Backend**: Django, Django REST Framework
-- **Frontend**: React, Axios, React Dropzone
+- **Enhanced Candidate Insights:**  
+  By combining traditional resume data with public online information, ResFlow provides a more complete picture of a candidate's professional background.
 
-## Setup and Installation
+- **Time-Saving:**  
+  Automates the tedious process of manually reviewing resumes and searching for additional candidate information online, allowing recruiters to focus on interviewing and decision-making.
 
-### Backend Setup (Django)
+- **Improved Decision Making:**  
+  The enriched profiles help recruiters quickly identify the strengths, skills, and online contributions of candidates, facilitating smarter hiring decisions.
 
-1. **Clone the repository**:
+- **User-Friendly Operation:**  
+  Designed to be straightforward to use with simple command-line instructions, making it easy to integrate into existing recruitment workflows.
 
-    ```bash
-    https://github.com/arfazkhan/resflow-v2.git
-    ```
+---
 
-2. **Activate the virtual environment**:
+## How ResFlow Works
 
-    ```bash
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+1. **Resume Processing:**  
+   Simply run ResFlow on a PDF resume, and it will automatically extract key candidate details and any URLs present.
 
-3. **Install the dependencies**:
+2. **Data Enrichment:**  
+   The tool then checks the extracted URLs and retrieves public information associated with them. This could include details about projects, contributions, or other relevant data available online.
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-4. **Change to backend directory**:
+3. **Comprehensive Profiles:**  
+   The result is an enriched candidate profile that combines the information from the resume with additional insights from OSINT, giving recruiters a well-rounded view of each applicant.
 
-    ```bash
-   cd resflow-v2/resflow_v2
-    ```
+---
+---
 
-5. **Apply migrations**:
+## Why Use ResFlow?
 
-    ```bash
-    python manage.py migrate
-    ```
+ResFlow goes beyond traditional resume screening by automatically enhancing candidate profiles with publicly available information. This enables recruiters to:
+- Make more informed hiring decisions.
+- Save valuable time in the recruitment process.
+- Focus on engaging with the best candidates by quickly understanding their online presence and professional contributions.
 
+---
 
+## Need Help?
 
-6. **Run the development server**:
+If you have questions, need support, or would like to contribute to ResFlow, please reach out at [arfuzkhan@gmail.com](mailto:arfuzkhan@gmail.com).
 
-    ```bash
-    python manage.py runserver
-    ```
+---
 
-### Frontend Setup (React)
-
-1. **Navigate to the frontend directory**:
-
-    ```bash
-    cd frontend
-    ```
-
-2. **Install the dependencies**:
-
-    ```bash
-    npm install
-    ```
-
-3. **Start the React development server**:
-
-    ```bash
-    npm start
-    ```
-
-## Running the Project Locally
-
-### Running the Backend
-
-Ensure your virtual environment is activated and run:
-
-```bash
-python manage.py runserver
-```
-
-The backend should now be running at `http://127.0.0.1:8000`.
-
-### Running the Frontend
-
-Navigate to the `frontend` directory and run:
-
-```bash
-npm start
-```
-
-The frontend should now be running at `http://localhost:3000`.
-
-## Usage
-
-- Visit `http://localhost:3000` to access the resume upload form.
-- Fill in your name, email, and upload a resume file (PDF, DOCX, or TXT).
-- Submit the form to upload the resume.
+ResFlow is your smart solution for a faster, more insightful recruitment process!
 
